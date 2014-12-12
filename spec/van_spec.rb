@@ -8,6 +8,10 @@ describe Van do
 	let(:bike2){ Bike.new }
 	let(:garage){ Garage.new(:capacity => 1000) }
 
+	def fill_van(van)
+		30.times { van.dock(Bike.new) }
+	end
+
 	it "should allow setting default capacity on initialising" do
 		expect(van.capacity).to eq(30)
 	end

@@ -23,6 +23,9 @@ module BikeContainer
 	end
 
 	def dock(bike)
+		unless bike.instance_of? Bike
+			raise "This isn't a bike!"
+		end
 		raise "There is no more room for bikes" if full?
 		bikes << bike
 	end

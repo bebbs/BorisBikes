@@ -9,7 +9,9 @@ class Van
 	end
 
 	def change_to_broken_bike_array(station)
-		station.unavailable_bikes.each {|bike| broken_bikes << bike }
+		station.unavailable_bikes.each do |bike| 
+      broken_bikes << bike 
+    end
 	end
 
 	def number_of_broken_bikes_at(station)
@@ -18,13 +20,23 @@ class Van
 
 	def collect_from_station(station)
 		change_to_broken_bike_array(station)
-		broken_bikes.push { |bike| dock(bike) }
-		station.unavailable_bikes.each { |bike| station.release(bike) }
+		broken_bikes.push do |bike| 
+      dock(bike) 
+    end
+
+		station.unavailable_bikes.each do |bike| 
+      station.release(bike)
+    end
 	end
 
 	def collect_from_garage(garage)
-		garage.available_bikes.each { |bike| dock(bike) }
-		garage.available_bikes.each { |bike| garage.release(bike) }
+		garage.available_bikes.each do |bike| 
+      dock(bike) 
+    end
+
+		garage.available_bikes.each do |bike| 
+      garage.release(bike)
+    end
 	end
 
 end

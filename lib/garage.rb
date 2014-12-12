@@ -9,7 +9,10 @@ class Garage
 	end
 
 	def accept(van)
-		van.broken_bikes.each { |bike| bike.fix! ; dock(bike) }
+		van.broken_bikes.each do |bike| 
+			bike.fix!  
+			dock(bike)
+		end
 		van.broken_bikes.clear
 	end
 

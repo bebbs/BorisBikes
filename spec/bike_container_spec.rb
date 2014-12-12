@@ -32,6 +32,10 @@ describe BikeContainer do
 		expect(holder).to be_full
 	end
 
+	it "should only accept bikes" do
+		expect(lambda { holder.dock("banana") }).to raise_error(RuntimeError, "This isn't a bike!")
+	end
+
 	it "should not accept a bike if it's full" do
 		fill_holder(10, holder)
 		expect(lambda { holder.dock(bike) }).to raise_error(RuntimeError, 'There is no more room for bikes')
