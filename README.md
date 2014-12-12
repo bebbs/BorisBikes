@@ -1,6 +1,8 @@
 Boris Bikes
 ====================
 
+Makers Academy Week 1 Challenge: Design and implement the classes and methods needed for a system similar to the TfL Cycle Hire scheme.
+
 ###Class - Bike
 
 Responsibilites             | Collaborators
