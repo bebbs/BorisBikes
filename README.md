@@ -18,6 +18,8 @@ cd BorisBikes
 ```
 - Run `rspec` to run the RSpec test suite.
 
+##Collaborators
+[Charlie Walsh](https://github.com/ciawalsh) and [Josh Bebbington](https://github.com/bebbs) of the December '14 cohort at [Makers Academy](https://www.makersacademy.com)
 
 ##Class Responsibility Collaboration Cards
 
