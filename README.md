@@ -1,7 +1,25 @@
 Boris Bikes
 ====================
 
-Makers Academy Week 1 Challenge: Design and implement the classes and methods needed for a system similar to the TfL Cycle Hire scheme.
+**Makers Academy Week 1 Challenge**: Design and implement the classes and methods needed for a system similar to the TfL Cycle Hire scheme. 
+
+I undertook this project to gain a better understanding of Object-Oriented Design, domain modelling, and test driven development. In addition to achieving these goals, I learnt the basics of using modules to avoid repetition and encourage reusability throughout my code.
+
+##Technologies
+- Ruby
+- RSpec
+
+##How to install
+- Clone this repo to your computer
+
+```
+git clone https://github.com/bebbs/BorisBikes.git
+cd BorisBikes
+```
+- Run `rspec` to run the RSpec test suite.
+
+
+##Class Responsibility Collaboration Cards
 
 ###Class - Bike
 
@@ -14,18 +32,9 @@ Be fixed                    | Garage
 Be held                     | Garage, Van, User, Station
 Be moved                    | Van, User
 
-### Class - User
-
-Responsibilites     | Collaborators
---------------------|------------------------
-Rent                |  Bike, Station
-Break               |  Bike
-Return              |  Bike, Station
-Move                |  Bike
-
 ### Class - Station 
 
-Responisibilites        |Collaborators
+Responsibilites         |Collaborators
 ------------------------|------------------
 Hold                    | Bike
 Receive                 | Bike, User, Van
@@ -37,7 +46,7 @@ Responisibilites        |Collaborators
 ------------------------|------------------
 Receive                 | Bike, Station, Garage
 Eject                   | Bike, Station, Garage
-Holding                 | Bike
+Hold                    | Bike
 Move                    | Bike, Station, Garage
 
 ### Class - Garage 
