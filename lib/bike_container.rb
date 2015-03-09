@@ -23,19 +23,13 @@ module BikeContainer
 	end
 
 	def dock(bike)
-		unless bike.instance_of? Bike
-			raise "This isn't a bike!"
-		end
+		raise "This isn't a bike!" if !is_a_bike?(bike)
 		raise "There is no more room for bikes" if full?
 		bikes << bike
 	end
 
 	def release(bike)
-		if empty?
-			raise "There are no bikes in this holder"
-		else
-			bikes.delete(bike) 
-		end
+		empty? ? (raise "There are no bikes in this holder") : bikes.delete(bike)
 	end
 
 	def release_broken(bike)
@@ -45,6 +39,10 @@ module BikeContainer
 			broken_bikes.delete(bike) 
 		end
 	end
+
+  def is_a_bike?(bike)
+    bike.instance_of? Bike
+  end
 
 	def empty?
 		bike_count == 0

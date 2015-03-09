@@ -32,9 +32,6 @@ class Van
 	def collect_from_garage(garage)
 		garage.available_bikes.each do |bike| 
       dock(bike) 
-    end
-
-		garage.available_bikes.each do |bike| 
       garage.release(bike)
     end
 	end

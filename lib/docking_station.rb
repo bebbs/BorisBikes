@@ -9,10 +9,8 @@ class DockingStation
 	end
 
 	def accept_from_van(van)
-		van.available_bikes.each do |bike| 
-			dock(bike) 
-		end
-		van.bikes.clear		
+		van.available_bikes.each {|bike| dock(bike)}
+		van.bikes.clear
 	end
 
 end
